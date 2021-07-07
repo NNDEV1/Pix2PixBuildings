@@ -1,8 +1,9 @@
-tf.keras.backend.clear_session()
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from model.pix2pix import Pix2pix
+
+#tf.keras.backend.clear_session()
 
 iters = 200*400
 batch_size = 1
