@@ -2,7 +2,6 @@ import tensorflow as tf
 import numpy as np
 import os
 import sys
-import numpy as np
 from PIL import Image, ImageOps
 from utils import batch_norm, get_shape, lkrelu
 
