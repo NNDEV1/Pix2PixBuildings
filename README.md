@@ -61,7 +61,7 @@
 
 Given an image the model generates a caption that describes the image
 
-![Results:](iter_7500.png)
+![Results:](iter_7500.jpg)
 
 ### Built With
 
