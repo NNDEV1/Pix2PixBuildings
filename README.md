@@ -61,9 +61,7 @@
 
 Given an image the model generates a caption that describes the image
 
-![Results:](https://colab.research.google.com/0b125631-cc1c-4c23-ba36-551c64a1ec3c)
-
-https://colab.research.google.com/0b125631-cc1c-4c23-ba36-551c64a1ec3c
+![Results:](iter_7500.png)
 
 ### Built With
 
