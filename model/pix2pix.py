@@ -5,7 +5,6 @@ import tensorflow as tf
 import numpy as np
 import os
 import sys
-import numpy as np
 from PIL import Image, ImageOps
 
 class Pix2pix(object):
