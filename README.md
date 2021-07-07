@@ -73,7 +73,7 @@ Given an image the model generates a caption that describes the image
 ## Getting Started
 
 * *Clone git repository*
-* *Refer to flickr.txt to see if data is downloaded*
+* *Refer https://cmp.felk.cvut.cz/~tylecr1/facade/ to download data*
 * *Make sure correct packages are installed(below)*
 * *Run train.py*
 * *Change the model loading directory in predict.py your saved model's directory*
