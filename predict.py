@@ -2,6 +2,7 @@
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing.image import load_img
+from keras.preprocessing.image import array_to_img
 from numpy import load
 from numpy import expand_dims
 from matplotlib import pyplot
@@ -19,15 +20,14 @@ def load_image(filename, size=(256,256)):
 	return pixels
  
 # load source image
-src_image = load_image('satellite.jpg')
+src_image = load_image('/content/base/cmp_b0008.jpg')
 print('Loaded', src_image.shape)
-# load model
-model = load_model('model_109600.h5')
-# generate image from source
-gen_image = model.predict(src_image)
-# scale from [-1,1] to [0,1]
-gen_image = (gen_image + 1) / 2.0
-# plot the image
-pyplot.imshow(gen_image[0])
-pyplot.axis('off')
-pyplot.show()
+
+with tf.Session() as sess:
+  # Restore variables from disk.
+  saver.restore(sess, "/content/models/model_3000.ckpt")
+  print("Model restored.")
+  gen_image = model.sample_generator(sess, src_image).squeeze(0)
+  gen_image = (gen_image + 1) / 2.0
+
+  plt.imshow((array_to_img(gen_image)))
